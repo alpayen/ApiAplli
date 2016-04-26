@@ -6,6 +6,16 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
+
+
+    public function event(){
+        $this->hasMany('App/Event');
+    }
+
+    public function sport(){
+        $this->hasMany('App/Sport');
+    }
+
     /**
      * The attributes that are mass assignable.
      *

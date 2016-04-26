@@ -19,11 +19,17 @@ class CreateEventTable extends Migration
         {
             $table->increments('id');
             $table->integer('user_id');
-            $table->string('event');
-            $table->string('description');
+            $table->integer('sport_id');
+            $table->dateTime('datetime');
+            $table->string('duration');
+            $table->integer('participant');
+            $table->integer('place');
+
             $table->timestamps();
         });
     }
+
+
 
 
     /**
