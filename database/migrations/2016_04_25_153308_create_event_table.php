@@ -23,7 +23,8 @@ class CreateEventTable extends Migration
             $table->dateTime('datetime');
             $table->string('duration');
             $table->integer('participant');
-            $table->integer('place');
+            $table->integer('participantmax');
+            $table->string('place');
 
             $table->timestamps();
         });

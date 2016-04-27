@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use App\Event;
+use App\Sport;
 use Illuminate\Auth\Access\Response;
 use Illuminate\Http\Request;
 
@@ -21,6 +22,14 @@ class ApiController extends Controller
     {
 
             $events = Event::all();
+
+
+        foreach($events as $event){
+                $sportname = Sport::find($event['sport_id']);
+
+
+            $event["sport"] =  $sportname['name'];
+        }
 
             return $events ->toJson();
 

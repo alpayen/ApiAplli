@@ -12,6 +12,10 @@ class Event extends Model
         return $this->belongsTo('App\User');
     }
 
+    public function sport(){
+        return $this->hasOne('App/Sport');
+    }
+
     protected $fillable = [
         'user_id', 'event', 'description',
     ];}
