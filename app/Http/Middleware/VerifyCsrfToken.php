@@ -12,6 +12,6 @@ class VerifyCsrfToken extends BaseVerifier
      * @var array
      */
     protected $except = [
-        //
+        'http://localhost/ApiAppliv2/public/store'
     ];
 }

@@ -53,7 +53,20 @@ class ApiController extends Controller
      */
     public function store(Request $request)
     {
+        $request->toArray();
 
+
+        $event = new Event;
+        
+        $event->user_id = $request->user_id;
+        $event->sport_id=$request->sport_id;
+        $event->datetime=$request->datetime;
+        $event->duration=$request->duration;
+        $event->participant=$request->participant;
+        $event->participantmax=$request->participantmax;
+        $event->place=$request->place;
+
+        $event->save();
     }
 
     /**

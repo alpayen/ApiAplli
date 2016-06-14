@@ -16,6 +16,7 @@ class SportController extends Controller
      */
     public function index()
     {
+
         $sports = Sport::all();
 
 
@@ -29,7 +30,7 @@ class SportController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -40,7 +41,10 @@ class SportController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->toArray();
+        $sport = new Sport;
+        $sport->name = $request->name;
+        $sport->save();
     }
 
     /**
@@ -74,7 +78,7 @@ class SportController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
     }
 
     /**

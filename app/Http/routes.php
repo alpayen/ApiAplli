@@ -13,3 +13,4 @@
 
 Route::resource('/event', 'ApiController');
 Route::resource('/sport', 'SportController');
+Route::post('/store', 'ApiController@store');
